@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BankaTest
 {
-    public partial class Giris : Form
+    public partial class Banka : Form
     {
-        public Giris()
+        public Banka()
         {
             InitializeComponent();
         }
