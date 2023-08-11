@@ -20,8 +20,6 @@ namespace BankaTest
 
         SqlConnection baglanti = new SqlConnection(@"Data Source=Vural\SQLEXPRESS;Initial Catalog=DbBanka;Integrated Security=True");
 
-
-
         private void BtnRandom_Click(object sender, EventArgs e)
         {
             // Random hesap numarası oluşturma 
