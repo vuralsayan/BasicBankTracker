@@ -90,6 +90,7 @@
             this.LnkKayıtOl.TabIndex = 4;
             this.LnkKayıtOl.TabStop = true;
             this.LnkKayıtOl.Text = "Kayıt Ol";
+            this.LnkKayıtOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkKayıtOl_LinkClicked);
             // 
             // Giris
             // 

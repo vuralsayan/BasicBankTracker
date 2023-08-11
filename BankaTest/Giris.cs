@@ -16,5 +16,11 @@ namespace BankaTest
         {
             InitializeComponent();
         }
+
+        private void LnkKayıtOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Kayıt frm = new Kayıt();    
+            frm.Show();
+        }
     }
 }
