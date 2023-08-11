@@ -21,10 +21,40 @@ namespace BankaTest
         SqlConnection baglanti = new SqlConnection(@"Data Source=Vural\SQLEXPRESS;Initial Catalog=DbBanka;Integrated Security=True");
 
 
+
+        private void BtnRandom_Click(object sender, EventArgs e)
+        {
+            // Random hesap numarası oluşturma 
+            Random rnd = new Random();
+            string yeniNumara;
+
+            do
+            {
+                int rastgeleSayi = rnd.Next(100000, 1000000);
+                yeniNumara = rastgeleSayi.ToString();
+                MskHesapNo.Text = yeniNumara;
+
+            } while (IsNumberUsed(yeniNumara, baglanti));
+
+            // Hesap numarası kullanılmış mı kontrolü
+            bool IsNumberUsed(string numara, SqlConnection baglanti)
+            {
+                using (SqlCommand komut2 = new SqlCommand("SELECT COUNT(*) FROM TBLKISILER WHERE HESAPNO = @P1", baglanti))
+                {
+                    baglanti.Open();
+                    komut2.Parameters.AddWithValue("@P1", numara);
+                    int count = (int)komut2.ExecuteScalar();
+                    baglanti.Close();
+                    return count > 0; // count > 0 ise true döndürür.
+                }
+            }
+        }
+
+
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("INSERT INTO TBLKISILER (AD, SOYAD, TC, TELEFON, HESAPNO, SIFRE) VALUES(@P1,@P2,@P3,@P4,@P5,@P6)",baglanti);
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLKISILER (AD, SOYAD, TC, TELEFON, HESAPNO, SIFRE) VALUES(@P1,@P2,@P3,@P4,@P5,@P6)", baglanti);
             komut.Parameters.AddWithValue("@P1", TxtAd.Text);
             komut.Parameters.AddWithValue("@P2", TxtSoyad.Text);
             komut.Parameters.AddWithValue("@P3", MskTC.Text);
@@ -36,11 +66,5 @@ namespace BankaTest
             MessageBox.Show("Kayıt Başarılı Bir Şekilde Gerçekleşti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void BtnRandom_Click(object sender, EventArgs e)
-        {
-            Random rnd = new Random();
-            int sayi = rnd.Next(100000, 1000000);    
-            MskHesapNo.Text = sayi.ToString();  
-        }
     }
 }
