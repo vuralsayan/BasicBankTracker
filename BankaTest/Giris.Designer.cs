@@ -33,6 +33,7 @@
             this.MskHesapNo = new System.Windows.Forms.MaskedTextBox();
             this.TxtSifre = new System.Windows.Forms.TextBox();
             this.BtnGirisYap = new System.Windows.Forms.Button();
+            this.LnkKayıtOl = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -80,20 +81,32 @@
             this.BtnGirisYap.Text = "Giriş Yap";
             this.BtnGirisYap.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // LnkKayıtOl
+            // 
+            this.LnkKayıtOl.AutoSize = true;
+            this.LnkKayıtOl.Location = new System.Drawing.Point(283, 260);
+            this.LnkKayıtOl.Name = "LnkKayıtOl";
+            this.LnkKayıtOl.Size = new System.Drawing.Size(83, 24);
+            this.LnkKayıtOl.TabIndex = 4;
+            this.LnkKayıtOl.TabStop = true;
+            this.LnkKayıtOl.Text = "Kayıt Ol";
+            // 
+            // Giris
             // 
             this.AcceptButton = this.BtnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(175)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(543, 328);
+            this.Controls.Add(this.LnkKayıtOl);
             this.Controls.Add(this.BtnGirisYap);
             this.Controls.Add(this.TxtSifre);
             this.Controls.Add(this.MskHesapNo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş";
             this.ResumeLayout(false);
@@ -108,6 +121,7 @@
         private System.Windows.Forms.MaskedTextBox MskHesapNo;
         private System.Windows.Forms.TextBox TxtSifre;
         private System.Windows.Forms.Button BtnGirisYap;
+        private System.Windows.Forms.LinkLabel LnkKayıtOl;
     }
 }
 
