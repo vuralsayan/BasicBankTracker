@@ -36,6 +36,16 @@ namespace BankaTest
                 LblTelefon.Text = dr[4].ToString();
             }
             baglanti.Close();
+
+            //Hesap bakiyesini gösterme
+            baglanti.Open();
+            SqlCommand komut2 = new SqlCommand("SELECT * FROM TBLHESAP WHERE HESAPNO=@p1", baglanti);
+            komut2.Parameters.AddWithValue("@p1", hesap);
+            SqlDataReader dr2 = komut2.ExecuteReader();
+            while (dr2.Read())
+            {
+                LblBakiye.Text = dr2[1].ToString();
+            }
         }
 
         private void BtnGonder_Click(object sender, EventArgs e)

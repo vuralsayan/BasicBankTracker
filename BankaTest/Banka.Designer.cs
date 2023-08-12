@@ -43,13 +43,15 @@
             this.MskHesapNo = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnHareket = new System.Windows.Forms.Button();
+            this.LblBakiye = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 59);
+            this.label1.Location = new System.Drawing.Point(37, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 24);
             this.label1.TabIndex = 0;
@@ -58,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 101);
+            this.label2.Location = new System.Drawing.Point(32, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 24);
             this.label2.TabIndex = 1;
@@ -67,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 143);
+            this.label3.Location = new System.Drawing.Point(51, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 2;
@@ -76,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 185);
+            this.label4.Location = new System.Drawing.Point(28, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 24);
             this.label4.TabIndex = 3;
@@ -85,7 +87,7 @@
             // LblAdSoyad
             // 
             this.LblAdSoyad.AutoSize = true;
-            this.LblAdSoyad.Location = new System.Drawing.Point(154, 59);
+            this.LblAdSoyad.Location = new System.Drawing.Point(146, 22);
             this.LblAdSoyad.Name = "LblAdSoyad";
             this.LblAdSoyad.Size = new System.Drawing.Size(54, 24);
             this.LblAdSoyad.TabIndex = 4;
@@ -94,7 +96,7 @@
             // LblHesapNo
             // 
             this.LblHesapNo.AutoSize = true;
-            this.LblHesapNo.Location = new System.Drawing.Point(154, 101);
+            this.LblHesapNo.Location = new System.Drawing.Point(146, 64);
             this.LblHesapNo.Name = "LblHesapNo";
             this.LblHesapNo.Size = new System.Drawing.Size(54, 24);
             this.LblHesapNo.TabIndex = 5;
@@ -103,7 +105,7 @@
             // LblTC
             // 
             this.LblTC.AutoSize = true;
-            this.LblTC.Location = new System.Drawing.Point(154, 185);
+            this.LblTC.Location = new System.Drawing.Point(146, 148);
             this.LblTC.Name = "LblTC";
             this.LblTC.Size = new System.Drawing.Size(54, 24);
             this.LblTC.TabIndex = 7;
@@ -112,7 +114,7 @@
             // LblTelefon
             // 
             this.LblTelefon.AutoSize = true;
-            this.LblTelefon.Location = new System.Drawing.Point(154, 143);
+            this.LblTelefon.Location = new System.Drawing.Point(146, 106);
             this.LblTelefon.Name = "LblTelefon";
             this.LblTelefon.Size = new System.Drawing.Size(54, 24);
             this.LblTelefon.TabIndex = 6;
@@ -125,7 +127,7 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.MskHesapNo);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(12, 279);
+            this.groupBox1.Location = new System.Drawing.Point(32, 200);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(465, 198);
             this.groupBox1.TabIndex = 8;
@@ -178,7 +180,7 @@
             // 
             // BtnHareket
             // 
-            this.BtnHareket.Location = new System.Drawing.Point(435, 78);
+            this.BtnHareket.Location = new System.Drawing.Point(310, 22);
             this.BtnHareket.Name = "BtnHareket";
             this.BtnHareket.Size = new System.Drawing.Size(187, 47);
             this.BtnHareket.TabIndex = 9;
@@ -186,12 +188,32 @@
             this.BtnHareket.UseVisualStyleBackColor = true;
             this.BtnHareket.Click += new System.EventHandler(this.BtnHareket_Click);
             // 
+            // LblBakiye
+            // 
+            this.LblBakiye.AutoSize = true;
+            this.LblBakiye.Location = new System.Drawing.Point(388, 86);
+            this.LblBakiye.Name = "LblBakiye";
+            this.LblBakiye.Size = new System.Drawing.Size(54, 24);
+            this.LblBakiye.TabIndex = 11;
+            this.LblBakiye.Text = "Null ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(306, 86);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 24);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Bakiye:";
+            // 
             // Banka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(175)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1013, 525);
+            this.ClientSize = new System.Drawing.Size(516, 419);
+            this.Controls.Add(this.LblBakiye);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnHareket);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LblTC);
@@ -232,5 +254,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button BtnGonder;
         private System.Windows.Forms.Button BtnHareket;
+        private System.Windows.Forms.Label LblBakiye;
+        private System.Windows.Forms.Label label6;
     }
 }
