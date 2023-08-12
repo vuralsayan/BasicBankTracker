@@ -61,6 +61,13 @@ namespace BankaTest
             komut.Parameters.AddWithValue("@P6", MskSifre.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
+
+            //TBLHESAP tablosuna HESAPNO değerini ekleme    
+            baglanti.Open();
+            SqlCommand komut2 = new SqlCommand("INSERT INTO TBLHESAP (HESAPNO) VALUES(@P1)", baglanti);
+            komut2.Parameters.AddWithValue("@P1", MskHesapNo.Text);
+            komut2.ExecuteNonQuery();
+            baglanti.Close();
             MessageBox.Show("Kayıt Başarılı Bir Şekilde Gerçekleşti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

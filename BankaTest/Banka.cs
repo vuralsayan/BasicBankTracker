@@ -37,5 +37,34 @@ namespace BankaTest
             }
             baglanti.Close();
         }
+
+        private void BtnGonder_Click(object sender, EventArgs e)
+        {
+            //Gönderilen hesabın bakiyesini arttırma
+            baglanti.Open();    
+            SqlCommand komut = new SqlCommand("UPDATE TBLHESAP SET BAKIYE=BAKIYE+@p1 WHERE HESAPNO=@p2", baglanti);
+            komut.Parameters.AddWithValue("@p1", decimal.Parse(TxtTutar.Text));
+            komut.Parameters.AddWithValue("@p2", MskHesapNo.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Para Gönderme İşlemi Gerçekleşti");
+
+            //Gönderen hesabın bakiyesini azaltma
+            baglanti.Open();
+            SqlCommand komut2 = new SqlCommand("UPDATE TBLHESAP SET BAKIYE=BAKIYE-@p1 WHERE HESAPNO=@p2", baglanti);
+            komut2.Parameters.AddWithValue("@p1", decimal.Parse(TxtTutar.Text));
+            komut2.Parameters.AddWithValue("@p2", LblHesapNo.Text);
+            komut2.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Para Çekme İşlemi Gerçekleşti");
+
+        }
+
+        private void BtnHareket_Click(object sender, EventArgs e)
+        {
+            Hareket hrkt = new Hareket();   
+            hrkt.hesapNo = LblHesapNo.Text;
+            hrkt.Show();
+        }
     }
 }

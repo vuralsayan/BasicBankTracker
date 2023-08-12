@@ -42,6 +42,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.MskHesapNo = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.BtnHareket = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +140,7 @@
             this.BtnGonder.TabIndex = 6;
             this.BtnGonder.Text = "Gönder";
             this.BtnGonder.UseVisualStyleBackColor = true;
+            this.BtnGonder.Click += new System.EventHandler(this.BtnGonder_Click);
             // 
             // TxtTutar
             // 
@@ -174,12 +176,23 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Hesap No:";
             // 
+            // BtnHareket
+            // 
+            this.BtnHareket.Location = new System.Drawing.Point(435, 78);
+            this.BtnHareket.Name = "BtnHareket";
+            this.BtnHareket.Size = new System.Drawing.Size(187, 47);
+            this.BtnHareket.TabIndex = 9;
+            this.BtnHareket.Text = "Hesap Hareketleri";
+            this.BtnHareket.UseVisualStyleBackColor = true;
+            this.BtnHareket.Click += new System.EventHandler(this.BtnHareket_Click);
+            // 
             // Banka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(175)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1013, 525);
+            this.Controls.Add(this.BtnHareket);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LblTC);
             this.Controls.Add(this.LblTelefon);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.TextBox TxtTutar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button BtnGonder;
+        private System.Windows.Forms.Button BtnHareket;
     }
 }
