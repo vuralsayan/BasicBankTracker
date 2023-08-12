@@ -37,6 +37,11 @@ namespace BankaTest
             }
             baglanti.Close();
 
+            Bakiye();
+        }
+
+        void Bakiye()
+        {
             //Hesap bakiyesini gösterme
             baglanti.Open();
             SqlCommand komut2 = new SqlCommand("SELECT * FROM TBLHESAP WHERE HESAPNO=@p1", baglanti);
@@ -46,8 +51,10 @@ namespace BankaTest
             {
                 LblBakiye.Text = dr2[1].ToString();
             }
-            baglanti.Close();   
+            baglanti.Close();
         }
+
+
 
         private void BtnGonder_Click(object sender, EventArgs e)
         {
@@ -77,6 +84,8 @@ namespace BankaTest
             komut3.Parameters.AddWithValue("@p3", decimal.Parse(TxtTutar.Text));
             komut3.ExecuteNonQuery();
             baglanti.Close();
+
+            Bakiye();
         }
 
         private void BtnHareket_Click(object sender, EventArgs e)
