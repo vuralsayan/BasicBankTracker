@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 127);
+            this.label1.Location = new System.Drawing.Point(58, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 24);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 181);
+            this.label2.Location = new System.Drawing.Point(103, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 24);
             this.label2.TabIndex = 1;
@@ -77,6 +77,7 @@
             // 
             // BtnGirisYap
             // 
+            this.BtnGirisYap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.BtnGirisYap.FlatAppearance.BorderSize = 0;
             this.BtnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGirisYap.Location = new System.Drawing.Point(167, 226);
@@ -84,13 +85,14 @@
             this.BtnGirisYap.Size = new System.Drawing.Size(191, 43);
             this.BtnGirisYap.TabIndex = 3;
             this.BtnGirisYap.Text = "Giriş Yap";
-            this.BtnGirisYap.UseVisualStyleBackColor = true;
+            this.BtnGirisYap.UseVisualStyleBackColor = false;
             this.BtnGirisYap.Click += new System.EventHandler(this.BtnGirisYap_Click);
             // 
             // LnkKayıtOl
             // 
             this.LnkKayıtOl.AutoSize = true;
-            this.LnkKayıtOl.Location = new System.Drawing.Point(255, 283);
+            this.LnkKayıtOl.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(92)))), ((int)(((byte)(104)))));
+            this.LnkKayıtOl.Location = new System.Drawing.Point(299, 281);
             this.LnkKayıtOl.Name = "LnkKayıtOl";
             this.LnkKayıtOl.Size = new System.Drawing.Size(83, 24);
             this.LnkKayıtOl.TabIndex = 4;
@@ -135,6 +137,8 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş";

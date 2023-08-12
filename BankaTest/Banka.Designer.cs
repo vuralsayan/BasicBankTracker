@@ -136,12 +136,15 @@
             // 
             // BtnGonder
             // 
+            this.BtnGonder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.BtnGonder.FlatAppearance.BorderSize = 0;
+            this.BtnGonder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGonder.Location = new System.Drawing.Point(115, 114);
             this.BtnGonder.Name = "BtnGonder";
             this.BtnGonder.Size = new System.Drawing.Size(149, 39);
             this.BtnGonder.TabIndex = 6;
             this.BtnGonder.Text = "Gönder";
-            this.BtnGonder.UseVisualStyleBackColor = true;
+            this.BtnGonder.UseVisualStyleBackColor = false;
             this.BtnGonder.Click += new System.EventHandler(this.BtnGonder_Click);
             // 
             // TxtTutar
@@ -180,12 +183,15 @@
             // 
             // BtnHareket
             // 
+            this.BtnHareket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.BtnHareket.FlatAppearance.BorderSize = 0;
+            this.BtnHareket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHareket.Location = new System.Drawing.Point(310, 22);
             this.BtnHareket.Name = "BtnHareket";
             this.BtnHareket.Size = new System.Drawing.Size(187, 47);
             this.BtnHareket.TabIndex = 9;
             this.BtnHareket.Text = "Hesap Hareketleri";
-            this.BtnHareket.UseVisualStyleBackColor = true;
+            this.BtnHareket.UseVisualStyleBackColor = false;
             this.BtnHareket.Click += new System.EventHandler(this.BtnHareket_Click);
             // 
             // LblBakiye
@@ -226,6 +232,8 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Banka";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banka";
