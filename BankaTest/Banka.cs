@@ -46,6 +46,7 @@ namespace BankaTest
             {
                 LblBakiye.Text = dr2[1].ToString();
             }
+            baglanti.Close();   
         }
 
         private void BtnGonder_Click(object sender, EventArgs e)
@@ -68,6 +69,14 @@ namespace BankaTest
             baglanti.Close();
             MessageBox.Show("Para Çekme İşlemi Gerçekleşti");
 
+            //Hareket tablosuna kayıt
+            baglanti.Open();
+            SqlCommand komut3 = new SqlCommand("INSERT INTO TBLHAREKET(GONDEREN,ALICI,TUTAR) VALUES(@p1,@p2,@p3)", baglanti);
+            komut3.Parameters.AddWithValue("@p1", LblHesapNo.Text);              //Gönderen
+            komut3.Parameters.AddWithValue("@p2", MskHesapNo.Text);             //Alıcı
+            komut3.Parameters.AddWithValue("@p3", decimal.Parse(TxtTutar.Text));
+            komut3.ExecuteNonQuery();
+            baglanti.Close();
         }
 
         private void BtnHareket_Click(object sender, EventArgs e)
