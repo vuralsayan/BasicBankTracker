@@ -1,10 +1,10 @@
 ## BasicBankTracker
 
 <a>
-  <img height=200 width=330 align="center" src="./images/giris.png" />
+  <img height=200 width=230 align="center" src="./images/giris.png" />
 </a>
 <a>
-  <img height=200 width=330 align="center" src="./images/kayıt.png" />
+  <img height=200 width=230 align="center" src="./images/kayıt.png" />
 </a>
 
 <br>
