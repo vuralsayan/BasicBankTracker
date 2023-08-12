@@ -62,13 +62,16 @@ namespace BankaTest
             komut.ExecuteNonQuery();
             baglanti.Close();
 
+            decimal bakiye = 0; //Yeni kullanıcı hesap bakiyesi
+
             //TBLHESAP tablosuna HESAPNO değerini ekleme    
             baglanti.Open();
-            SqlCommand komut2 = new SqlCommand("INSERT INTO TBLHESAP (HESAPNO) VALUES(@P1)", baglanti);
+            SqlCommand komut2 = new SqlCommand("INSERT INTO TBLHESAP (HESAPNO,BAKIYE) VALUES(@P1,@P2)", baglanti);
             komut2.Parameters.AddWithValue("@P1", MskHesapNo.Text);
+            komut2.Parameters.AddWithValue("@P2", bakiye);  
             komut2.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Kayıt Başarılı Bir Şekilde Gerçekleşti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Kayıt Başarılı Bir Şekilde Gerçekleşti \nHesap Numaranız: {MskHesapNo.Text}", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }
