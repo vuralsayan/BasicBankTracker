@@ -37,6 +37,7 @@ namespace BankaTest
             if (dr.Read())
             {
                 Banka bnk = new Banka();
+                bnk.hesap = MskHesapNo.Text;
                 bnk.Show();
                 this.Hide();
             }
